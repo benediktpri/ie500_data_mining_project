@@ -1,0 +1,37 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace  # Remove trailing whitespaces
+      - id: end-of-file-fixer    # Ensure files end with a newline
+      - id: check-yaml           # Check for valid YAML files
+      - id: check-json           # Check for valid JSON files
+
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black  # Format Python code with Black
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8  # Run Flake8 for linting
+
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort  # Sort Python imports
+
+  # Automatically strip notebook output and metadata
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.5.0
+    hooks:
+      - id: nbstripout  # Remove unnecessary notebook output
+
+  # Use nbqa to apply Flake8, Black, and isort to Jupyter notebooks
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.5.3
+    hooks:
+      - id: nbqa-black   # Apply Black to code cells in notebooks
+      - id: nbqa-flake8  # Apply Flake8 to code cells in notebooks
+      - id: nbqa-isort   # Apply isort to code cells in notebooks
