@@ -6,7 +6,7 @@ The project involves the analysis of the **Diabetes Health Indicators Dataset** 
 Given the high prevalence of diabetes in the United States, the creation of accurate predictive models can help with early detection and inform public health strategies, potentially mitigating the serious health complications associated with the disease. Using various machine learning techniques, this project aims to explore how survey data can be leveraged to enhance diabetes prediction and risk assessment.
 
 
-Team 11: *name tbd*
+Team 11: Support Vector Superstars
 
 Group members:
 Philipp Gänz,
