@@ -34,5 +34,5 @@ repos:
     hooks:
       - id: nbqa-black # Apply Black to code cells in notebooks
       - id: nbqa-flake8 # Apply Flake8 to code cells in notebooks
-        args: ["--ignore=E501"]
+        args: ["--ignore=E501,E402"]
       - id: nbqa-isort # Apply isort to code cells in notebooks
