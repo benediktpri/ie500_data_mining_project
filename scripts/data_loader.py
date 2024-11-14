@@ -10,6 +10,10 @@ class DataLoader:
     test_file_pca = "../data/pca/dataset_test_pca.csv"
     validation_file_pca = "../data/pca/dataset_val_pca.csv"
 
+    train_file_oversampling_random = "../data/resampling/dataset_train_oversampled.csv"
+    train_file_oversampling_smote = "../data/resampling/dataset_train_oversampled_smote.csv"
+    train_file_undersampling_random = "../data/resampling/dataset_train_undersampled.csv"
+
     def __init__(self):
         self.train_file = DataLoader.train_file
         self.test_file = DataLoader.test_file
@@ -17,6 +21,9 @@ class DataLoader:
         self.train_file_pca = DataLoader.train_file_pca
         self.test_file_pca = DataLoader.test_file_pca
         self.validation_file_pca = DataLoader.validation_file_pca
+        self.train_file_oversampling_random = DataLoader.train_file_oversampling_random
+        self.train_file_oversampling_smote = DataLoader.train_file_oversampling_smote
+        self.train_file_undersampling_random = DataLoader.train_file_undersampling_random
 
     def load_data(self, file_path, separate_target=True):
         data = pd.read_csv(file_path)
@@ -74,3 +81,27 @@ class DataLoader:
     @property
     def validation_dataframe_pca(self):
         return self.load_data(self.validation_file_pca, separate_target=False)
+
+    @property
+    def training_data_oversampling_random(self):
+        return self.load_data(self.train_file_oversampling_random)
+
+    @property
+    def training_data_oversampling_smote(self):
+        return self.load_data(self.train_file_oversampling_smote)
+
+    @property
+    def training_data_undersampling_random(self):
+        return self.load_data(self.train_file_undersampling_random)
+
+    @property
+    def training_dataframe_oversampling_random(self):
+        return self.load_data(self.train_file_oversampling_random, separate_target=False)
+
+    @property
+    def training_dataframe_oversampling_smote(self):
+        return self.load_data(self.train_file_oversampling_smote, separate_target=False)
+
+    @property
+    def training_dataframe_undersampling_random(self):
+        return self.load_data(self.train_file_undersampling_random, separate_target=False)
