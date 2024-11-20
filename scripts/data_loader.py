@@ -17,6 +17,9 @@ class DataLoader:
     train_file_undersampling_random = (
         "../data/resampling/dataset_train_undersampled.csv"
     )
+    train_file_resampling_smote_tomek = (
+        "../data/resampling/dataset_train_smote_tomek.csv"
+    )
 
     def __init__(self):
         self.train_file = DataLoader.train_file
@@ -29,6 +32,9 @@ class DataLoader:
         self.train_file_oversampling_smote = DataLoader.train_file_oversampling_smote
         self.train_file_undersampling_random = (
             DataLoader.train_file_undersampling_random
+        )
+        self.train_file_resampling_smote_tomek = (
+            DataLoader.train_file_resampling_smote_tomek
         )
 
     def load_data(self, file_path, separate_target=True):
@@ -126,5 +132,12 @@ class DataLoader:
             self.train_file_undersampling_random, separate_target=False
         )
 
+    @property
+    def training_data_resampling_smote_tomek(self):
+        return self.load_data(self.train_file_resampling_smote_tomek)
 
-# TODO: add best n for pca
+    @property
+    def training_dataframe_resampling_smote_tomek(self):
+        return self.load_data(
+            self.train_file_resampling_smote_tomek, separate_target=False
+        )
