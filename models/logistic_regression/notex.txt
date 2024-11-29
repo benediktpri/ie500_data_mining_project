@@ -1,0 +1,7 @@
+Best model saved to '../models/logistic_regression/lg_model_cv_sampling_pca20241129_165533.pkl'
+Best Parameters: {'classifier__C': 0.1, 'classifier__penalty': 'l2', 'classifier__solver': 'newton-cg', 'classifier__tol': 0.001, 'pca': None, 'resampler': RandomOverSampler(random_state=42)}
+Best Cross-Validation Recall: 0.4689126822676248
+
+Best model saved to '../models/logistic_regression/lg_model_cv_sampling_pca20241129_174608.pkl'
+Best Parameters: {'classifier__C': 1, 'classifier__penalty': 'l2', 'classifier__solver': 'lbfgs', 'classifier__tol': 0.001, 'pca': None, 'resampler': RandomUnderSampler(random_state=42)}
+Best Cross-Validation Recall: 0.4686208910595379
