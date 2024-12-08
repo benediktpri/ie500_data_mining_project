@@ -1,4 +1,5 @@
 .DS_Store
+models/decision_trees_ensembles/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
