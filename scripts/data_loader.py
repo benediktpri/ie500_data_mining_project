@@ -1,24 +1,31 @@
 import pandas as pd
+import os
 
 
 class DataLoader:
-    train_file = "../data/preprocessed/dataset_train.csv"
-    test_file = "../data/preprocessed/dataset_test.csv"
-    validation_file = "../data/preprocessed/dataset_val.csv"
+    base_path = os.path.dirname(
+        os.path.abspath(__file__)
+    )  # Get the directory of the current script
 
-    train_file_pca = "../data/pca/dataset_train_pca.csv"
-    test_file_pca = "../data/pca/dataset_test_pca.csv"
-    validation_file_pca = "../data/pca/dataset_val_pca.csv"
+    train_file = os.path.join(base_path, "../data/preprocessed/dataset_train.csv")
+    test_file = os.path.join(base_path, "../data/preprocessed/dataset_test.csv")
+    validation_file = os.path.join(base_path, "../data/preprocessed/dataset_val.csv")
 
-    train_file_oversampling_random = "../data/resampling/dataset_train_oversampled.csv"
-    train_file_oversampling_smote = (
-        "../data/resampling/dataset_train_oversampled_smote.csv"
+    train_file_pca = os.path.join(base_path, "../data/pca/dataset_train_pca.csv")
+    test_file_pca = os.path.join(base_path, "../data/pca/dataset_test_pca.csv")
+    validation_file_pca = os.path.join(base_path, "../data/pca/dataset_val_pca.csv")
+
+    train_file_oversampling_random = os.path.join(
+        base_path, "../data/resampling/dataset_train_oversampled.csv"
     )
-    train_file_undersampling_random = (
-        "../data/resampling/dataset_train_undersampled.csv"
+    train_file_oversampling_smote = os.path.join(
+        base_path, "../data/resampling/dataset_train_oversampled_smote.csv"
     )
-    train_file_resampling_smote_tomek = (
-        "../data/resampling/dataset_train_smote_tomek.csv"
+    train_file_undersampling_random = os.path.join(
+        base_path, "../data/resampling/dataset_train_undersampled.csv"
+    )
+    train_file_resampling_smote_tomek = os.path.join(
+        base_path, "../data/resampling/dataset_train_smote_tomek.csv"
     )
 
     def __init__(self):
