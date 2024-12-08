@@ -5,7 +5,6 @@ The project involves the analysis of the **Diabetes Health Indicators Dataset** 
 
 Given the high prevalence of diabetes in the United States, the creation of accurate predictive models can help with early detection and inform public health strategies, potentially mitigating the serious health complications associated with the disease. Using various machine learning techniques, this project aims to explore how survey data can be leveraged to enhance diabetes prediction and risk assessment.
 
-
 Team 11: Support Vector Superstars
 
 Group members:
@@ -15,41 +14,38 @@ Patricia Paskuda,
 Benedikt Prisett,
 Matthias Fast
 
-
 ## Installation
 
 ### Prerequisites
+
 - Python 3.9+
 
 ### Setup
 
 1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/benediktpri/ie500_data_mining_project.git
-    ```
+   ```bash
+   git clone https://github.com/benediktpri/ie500_data_mining_project.git
+   ```
 2. **Navigate to the project directory**:
-    ```bash
-    cd ie500_data_mining_project
-    ```
+
+   ```bash
+   cd ie500_data_mining_project
+   ```
 
 3. **Create a virtual environment** (optional, but recommended):
-    ```bash
-    python -m venv venv
-    ```
+
+   ```bash
+   python -m venv venv
+   ```
 
 4. **Activate the virtual environment**:
-    ```bash
-    source venv/bin/activate # On macOS/Linux
-    venv\Scripts\activate # On Windows
-    ```
+
+   ```bash
+   source venv/bin/activate # On macOS/Linux
+   venv\Scripts\activate # On Windows
+   ```
 
 5. **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-6. **Set up pre-commit hooks**:
-Set up the Git hooks defined in the `.pre-commit-config.yaml` file by running:
-    ```bash
-    pre-commit install
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
